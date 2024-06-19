@@ -41,6 +41,7 @@ body {
     text-shadow: 0 0 5px #fff;
 }
 .head-description{
+    
     width: 100%;
     margin-top: 3%;
     margin-left: -30%;
@@ -121,7 +122,7 @@ a {
     font-size: 1.5rem;
     text-transform: capitalize;
     color: #000;
-    margin-left: 30%;
+    margin-left: 10%;
 
 }
 #all-contents .subtitle {
@@ -172,6 +173,143 @@ a {
 
 /**/
 
+/*Show*/
+#show .inside{
+    margin-top: 10%;
+    display: block;
+    color: #333;
+}
+
+#show .subtitle{
+   text-align: center;
+}
+
+#show .description{
+    padding: 5px;
+   margin-left: 4%;
+}
+
+#show .title{
+    font-size: 1.8rem;
+    color: #000;
+    margin: 0 0 5px;
+    text-transform: capitalize;
+    text-align: center;
+    margin-bottom: 5%;
+}
+#show .inside {
+    padding: 50px 10px 10px 0;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    justify-items: center;
+    align-items: center;
+    display: block;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+   /* box-shadow: 0 0 5px #777;*/
+}
+
+#show img {
+    width: 97%;
+    height: 500px;
+    object-fit: cover;
+    object-position: center;
+    margin-left: 3%;
+
+}
+/**/
+
+
+#create .heading {
+    width: 100%;
+    text-align: center ;
+    padding: 15px 0;
+}
+
+#create .inside {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    
+}
+#create input {
+    display: block;
+    margin: 20px 0;
+    padding: 20px;
+    outline: none;
+    border-radius: 10px;
+    width: 100%;
+
+}
+
+#create  .btn{
+   
+
+}
+
+#create  .btn-container {
+width: 100%;
+display: block ;
+ text-align: center;
+
+}
+
+#create  .btn-container  button{
+    margin: 20px 0 0 0;
+    background: dodgerblue;
+    padding: 20px 30px;
+    border-radius: 3px;
+    color: ghostwhite;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    
+    
+ }
+
+
+
+.show-btn {
+    padding: 50px 0 0;
+   
+}
+.edit-btn {
+    background: orange;
+    padding: 10px;;
+    border-radius: 5px;
+    visibility: collapse;
+}
+
+.delete-btn {
+    background: red;
+    padding: 10px;
+    border-radius: 5px;
+    visibility: collapse;
+}
+
+/*edit and create*/
+
+.inside{
+    margin-top: 10%;
+    width: 70%;
+    box-shadow: 0 0 5px #777;
+    padding: 20px;
+}
+
+.inside label{
+    width: 50%;
+    
+}
+.inside textarea{
+    width: 100%;
+}
+
+
+/**/
+
 /*footer*/
 .foot{
     background-color: #080f3b;
@@ -179,6 +317,7 @@ a {
     height: 200px;
     margin-top: 20%;
 }
+
 
 /**/
         
