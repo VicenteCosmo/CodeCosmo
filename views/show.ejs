@@ -1,0 +1,36 @@
+<%- include('partials/header.ejs') %>
+
+<div class="back1">
+    <div class="back1-h1">
+        <h1>Em todos os meios para a Glória de Deus</h1>
+    </div>
+</div>
+
+<%  blog.forEach((blog)=>{%>
+    <section id="show">
+        <div class="inside">
+            <div class="title"><%= blog.title %></div>
+            <div class="image">
+                <img src="<%=blog.img_url %>" alt="">
+            </div>
+            <div class="contents">
+
+                <div class="subtitle"> <h4><%= blog.subtitle %></h4></div>
+                <br><br><br>
+                <p class="description">
+                    <%= blog.description %>
+                </p>
+                <div class="show-btn">
+                    <a class="delete-btn"href="/delete/<%=blog.id %>">Delete</a>
+                    <a class="edit-btn" href="/edit/<%= blog.id %>">Edit</a>
+                </div>
+             
+            </div>
+        </div>
+    </section>
+
+    <%})  %>
+
+
+
+<%- include('partials/footer.ejs') %>

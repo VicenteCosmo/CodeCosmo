@@ -1,0 +1,36 @@
+<%- include('partials/header.ejs') %>
+
+<div class="back">
+    <div class="back-h1">
+        <h1>Em todos os meios para a Glória de Deus</h1>
+    </div>
+</div>
+
+<!--<div class="create-link-container">
+    <a  class="create-link" href="/create"> create new blog</a>
+</div>-->
+
+<%  blogPost.forEach((blog)=>{%>
+
+    <section id="all-contents">
+    <div class="inside">
+        <div class="title"><%= blog.title %></div>
+        <div class="image-container">
+            <img class="image" src="<%= blog.img_url %>" alt="">
+        </div> 
+        <span></span>
+        <div class="subtitle"><%= blog.subtitle %></div>
+        <div class="btn-container">
+            <a class="btn" href="/show/<%= blog.id %>">Show more</a>
+        </div>
+        <p class="created "><%= blog.created %></p>
+        <div class="hr"></div>
+    </div>
+    
+  
+    </section>
+<%})  %>
+
+
+
+<%- include('partials/footer.ejs') %>

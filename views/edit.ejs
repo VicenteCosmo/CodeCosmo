@@ -1,0 +1,30 @@
+<%- include('partials/header.ejs') %>
+
+<%  blog.forEach((blog)=>{%>
+<section  id="create">
+    <div class="heading">
+        <h1>Create new blog</h1>
+    </div>
+    <div class="inside">
+        <form action="/edit/<%= blog.id %>?_method=put" method="POST">
+            <input class="title" name='title' value=' <%= blog.title %>'  type="text">
+            <input class="img-url" name='img_url' value=' <%= blog.img_url %>' type="text">
+            <textarea class="subtitle" name="subtitle" id="" cols="100" rows="10">
+                <%= blog.subtitle %>
+            </textarea>
+            <textarea  class="description"  name="description" id="" cols="100" rows="10">
+                <%= blog.description %>
+            </textarea>
+            <div class="btn-container">
+                <button class="btn">Submit</button>
+            </div>
+        </form>
+    </div>
+
+
+</section>
+<%})  %>
+
+
+
+<%- include('partials/footer.ejs') %>

@@ -1,0 +1,25 @@
+<%- include('partials/header.ejs') %>
+
+<section  id="create">
+    <div class="heading">
+        <h1>Create new blog</h1>
+    </div>
+    <div class="inside">
+        <form action="/create" method='POST'>
+            <input  class="title"   name='title' placeholder="title" type="text">
+            <input  class="img-url" name='img_url' placeholder="img-url" type="text">
+            <textarea  class="subtitle"  name="subtitle"" cols="100" rows="10" ></textarea>
+            <textarea  class="description"  name="description" id="" cols="100" rows="10"></textarea>
+            <div class="btn-container">
+                <button class="btn">Submit</button>
+            </div>
+        </form>
+    </div>
+
+
+</section>
+
+
+
+
+<%- include('partials/footer.ejs') %>
