@@ -16,11 +16,11 @@ router.get('/', (res, req)=>{
     })
 })
 
-router.get('/create', (req, res)=>{
+router.get('/createCornelio_cosmos_auth', (req, res)=>{
   res.render('create')
 })
 
-router.post('/create', encoder,  (req, res)=>{
+router.post('/createCornelio_cosmos_auth', encoder,  (req, res)=>{
   const post=req.body
   DB.query(`INSERT INTO bwd9njjtfcuriew5oprj.bog_info (title, img_url, subtitle , description) 
     VALUES(
@@ -53,7 +53,7 @@ router.get('/show/:id',(req, res)=>{
           })
 } )
 
-router.get('/edit/:id', (req, res)=>{
+router.get('/editCornelio_cosmos_auth/:id', (req, res)=>{
   const id=req.params.id
   const post=req.body
   DB.query( `SELECT * FROM bwd9njjtfcuriew5oprj.bog_info WHERE id="${id}" LIMIT 1`, (e, blog)=>{
@@ -66,7 +66,7 @@ router.get('/edit/:id', (req, res)=>{
   })
 })
 
-router.put('/edit/:id', encoder,  (req, res)=>{
+router.put('/editCornelio_cosmos_auth/:id', encoder,  (req, res)=>{
   const post=req.body
   const id=req.params.id
   DB.query(`UPDATE bwd9njjtfcuriew5oprj.bog_info
@@ -82,10 +82,10 @@ router.put('/edit/:id', encoder,  (req, res)=>{
         console.log('updated')
         res.redirect('/')
       }
-    })
+    })                                
 })
 
-router.get('/delete/:id', (req, res)=>{
+router.get('/deleteCornelio_cosmos_auth/:id', (req, res)=>{
   const id=req.params.id
   DB.query(`DELETE FROM bwd9njjtfcuriew5oprj.bog_info WHERE id="${id}" `, (e, result)=>{
     if(e){
@@ -96,6 +96,45 @@ router.get('/delete/:id', (req, res)=>{
     }
   })
 })
+
+//admin authentification
+
+router.get('/admin_auth', (req, res)=>{
+  res.render('admin_auth')
+})
+
+router.post('/admin_auth',  encoder, (req, res)=>{
+  const email=req.body.email
+  const password=req.body.password
+
+ // if(email && password){
+      DB.query(`SELECT * FROM bwd9njjtfcuriew5oprj.sircosmokk WHERE email_auth="${email}" AND pass_auth="${password}" `,(e, data)=>{
+        if(data.length>0){
+          res.redirect('/admin_corneliocosmos')
+  
+        }
+        else{
+          res.status(400).send('incorrect datas')
+          console.log(e)
+
+        }
+      })
+
+  //}
+ /* else{
+    res.send('Enter email address and password, please!')
+    res.end()
+  }*/
+
+})
+
+//Admin router
+
+router.get('/admin_corneliocosmos', (req, res)=>{
+ res.render('admin')
+ 
+})
+
 
 router
 

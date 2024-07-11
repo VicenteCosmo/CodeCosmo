@@ -1,0 +1,25 @@
+
+<%- include('partials/header.ejs')  %>
+
+<section  id="create">
+
+    <div class="heading">
+        <h1>Create new blog</h1>
+    </div>
+    <div class="inside_auth">
+        <form action="/admin_auth" method='POST'>
+          <div  class="auth_lb1"> <label for="email">Email</label> </div>
+          <div class="auth_input1" > <input required class="user" name="email"  placeholder="example@gmail.com" type="email"> </div>
+
+          <div  class="auth_lb2"> <label for="password">Password</label> </div>
+            
+          <div class="auth_input2" > <input required class="user" name="password"  placeholder="password" type="password"> </div>
+
+            <div class="btn-container">
+                <button class="btn">Login</button>
+            </div>
+        </form>
+    </div>
+
+
+</section>

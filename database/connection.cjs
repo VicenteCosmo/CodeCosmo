@@ -19,4 +19,21 @@ DB.connect((e)=>{
     }
 })
 
+/*const DB=mysql.createConnection({
+  host:'localhost',
+  user:'root',
+  port: '3306',
+  password:'cosmo',
+  database:'bwd9njjtfcuriew5oprj'
+})*/
+
+DB.connect((e)=>{
+  if(e){
+    console.log('failed to connect')
+  }
+  else{
+    console.log('database connected')
+  }
+})
+
 module.exports=DB
