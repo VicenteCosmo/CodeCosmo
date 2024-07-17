@@ -1,14 +1,54 @@
 <%- include('partials/header.ejs') %>
 
-<div class="back">
+<div class="card mb-3" style="max-width: 1500px;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img width="2000"  src="https://scontent.flad8-2.fna.fbcdn.net/v/t39.30808-6/450074665_1081494453980212_3693080927717795050_n.jpg?stp=dst-jpg_p526x296&_nc_cat=107&ccb=1-7&_nc_sid=833d8c&_nc_ohc=4NIAq22ANhIQ7kNvgFT27ov&_nc_ht=scontent.flad8-2.fna&oh=00_AYBg7VrrVSEiXFIyBY8yiRfB8sM-vV15G8y6JEYrBr0zLQ&oe=669DC720" class="img-fluid rounded-start" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br><br><br><br><br><br><br>
+
+  <%
+      blogPost.forEach((blog)=>{%>
+        <div class="card mb-3 mx-auto" style="max-width: 1000px;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src=" <%= blog.img_url %> " class="img-fluid rounded-start" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title"> <%= blog.title %> </h5>
+                  <p class="card-text"> <%= blog.subtitle %></p>
+                  <p class="card-text"><small class="text-muted"> <%= blog.created %></small></p>
+                  <div class="btn-container">
+                    <a class="btn" href="/show/<%= blog.id %>">Show more</a>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+      <%})
+   %>
+
+<!--<div class="back">
     <div class="back-h1">
         <h1>Em todos os meios para a Glória de Deus</h1>
     </div>
 </div>
 
-<!--<div class="create-link-container">
+<div class="create-link-container">
     <a  class="create-link" href="/create"> create new blog</a>
-</div>-->
+</div>--
 
 <%  blogPost.forEach((blog)=>{%>
 
@@ -33,4 +73,5 @@
 
 
 
-<%- include('partials/footer.ejs') %>
+
+<%- include('partials/footer.ejs') %>-->

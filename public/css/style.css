@@ -4,13 +4,20 @@
     margin: 0px;
     overflow-x: hidden;
 }
+
+html{
+    height: -web-kit-fill-available;
+    width: -web-kit-fill-available;
+}
+
 body {
     background: #fff;
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     position: relative;
+    height: -web-kit-fill-available;
 
-    @media screen and (max-width: 1200px) {
+    @media screen and (device-width: 480px) and (device-height: 600px)  {
         /*header*/
  header {
     background: #fff;
@@ -833,3 +840,14 @@ display: block ;
             color: #f9d979;
         }
 /**/
+
+.textL{
+   margin-top: 7%;
+    color: #f9d979;
+   /* -webkit-box-reflect: below 1px linear-gradient(transparent, #000);*/
+
+    text-shadow: 0 0 5px #080f3b;
+}
+.container a{
+    display: flex;
+}
